@@ -76,7 +76,7 @@ font-size: 18px;
 margin-bottom: 20px;
 letter-spacing: 1px;
 font-weight: bold;
-color: ${tertiary};
+color: ${brand};
 
 ${(props)=> props.WelcomeImage && `
 margin-bottom: 5px;
@@ -179,4 +179,89 @@ align-items: center;
 export const TextLinkContent = styled.Text`
 color: ${brand};
 font-size: 15px;
+`;
+
+
+export const BottomHalf = styled(TopHalf)`
+ justify-content: space-around;
+ `;
+
+
+export const InfoText = styled.Text`
+    color: ${Colors.gray};
+    font-size:15px;
+    text-align: center;
+`;
+
+export const EmphasizeText = styled.Text`
+    font-weight: bold;
+    font-style: italic;`;
+
+
+export const InlineGroup = styled.View`
+    flex-direction: row;
+    padding: 10px;
+    justify-content:center;
+    aligh-items: center;
+`;
+
+export const CodeInputSection = styled.View`
+flex: 1;
+align-items: center;
+justify-content: center;
+marging-vertical: 30px;
+`;
+
+export const HiddenTextInput = styled.TextInput`
+position: absolute;
+width: 1px;
+height: 1px;
+opacity:0;
+`;
+
+export const CodeInputsConatiner = styled.Pressable`
+width: 70%;
+flex-direction: row;
+justify-content: space-between;
+`;
+
+export const CodeInput = styled.View`
+border-color: ${Colors.lightGreen};
+min-width:15%;
+border-width:2px;
+border-radius: 5px;
+padding:12px;
+`;
+
+export const CodeInputText = styled.Text`
+ font-size: 22px;
+ font-weight: bold;
+ text-align: center;
+ color: ${Colors.brand};
+`;
+
+export const CodeInputFocused = styled(CodeInput)`
+border-color: ${Colors.green};
+`;
+
+
+// modal style
+export const ModalContainer = styled(StyledContainer)`
+justify-content: center;
+align-items: center;
+background-color: rgba(0,0,0,0.7);
+`;
+
+export const ModalView = styled.View`
+marging: 20px;
+background-color: white;
+border-radius: 20px;
+padding: 35px;
+align-items: center;
+elevation: 5;
+shadow-color: #000;
+shadow-offset: 0px 2px;
+shadow-opacity: 0.25;
+shadow-radius: 4px;
+width: 100%;
 `;
